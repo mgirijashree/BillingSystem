@@ -751,7 +751,7 @@ function showInlineError(message) {
 
 
 function handleBarcodeScan(decodedText) {
-    // 1. Remove all non-numeric characters just to be safe
+    alert("Product added to cart");
     const scannedBarcode = String(decodedText).replace(/\D/g, '').trim();
     console.log("Cleaned barcode:", scannedBarcode);
     
