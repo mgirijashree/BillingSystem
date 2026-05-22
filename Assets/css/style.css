@@ -1,0 +1,96 @@
+.overall{
+    width: 95%;
+    margin: auto;
+    font-family: Poppins;
+}
+/* ==========================================
+   1. COLOR PALETTES (The Core Switch)
+   ========================================== */
+
+/* LIGHT MODE: Light backgrounds, dark text & components */
+:root {
+    --bg-global: #f4f7f6;      /* Light page background */
+    --text-global: #1a1a1a;    /* Dark text */
+    --component-bg: #ffffff;   /* Pure white cards/containers */
+    --component-text: #1a1a1a; /* Dark text inside components */
+    --border-color: #e0e0e0;   /* Light gray borders */
+    --accent-color: #007bff;   /* Primary button color */
+    --accent-text: #ffffff;    /* Button text */
+}
+
+/* DARK MODE: Dark backgrounds, light text & components */
+body.dark {
+    --bg-global: #121212;      /* Deep dark background */
+    --text-global: #f5f5f5;    /* Light text */
+    --component-bg: #1e1e1e;   /* Dark gray cards/containers */
+    --component-text: #ffffff; /* White text inside components */
+    --border-color: #333333;   /* Dark gray borders */
+    --accent-color: #bb86fc;   /* Neon/Light accent purple */
+    --accent-text: #121212;    /* Dark text on active buttons */
+}
+
+/* ==========================================
+   2. GLOBAL APPLICATION
+   ========================================== */
+
+/* The '*' forces EVERY element on your page to listen to the variables */
+*, *::before, *::after {
+    box-sizing: border-box;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+body {
+    margin: 0;
+    padding: 2rem;
+    font-family: system-ui, -apple-system, sans-serif;
+    /* This changes the ENTIRE page background */
+    background-color: var(--bg-global);
+    color: var(--text-global);
+}
+
+/* ==========================================
+   3. COMPONENT STYLES
+   ========================================== */
+
+/* Navigation bar styling */
+nav {
+    padding: 1rem;
+    background-color: var(--component-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+nav a {
+    color: var(--accent-color);
+    text-decoration: none;
+    margin-right: 15px;
+    font-weight: bold;
+}
+
+/* Cards, tables, forms, dashboards, and containers */
+.card, .inventory-table, .settings-panel {
+    background-color: var(--component-bg);
+    color: var(--component-text);
+    border: 1px solid var(--border-color);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    max-width: 600px;
+}
+
+/* Buttons */
+button {
+    background-color: var(--accent-color);
+    color: var(--accent-text);
+    border: none;
+    padding: 12px 24px;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: 0.9;
+}

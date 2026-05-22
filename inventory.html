@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+        rel="stylesheet">
+    <!-- Bootstrap CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!--Bootstrap Icons-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!--  Tailwind CSS  -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!--Style CSS-->
+    <link rel="stylesheet" href="./Assets/css/style.css">
+    <!--Google fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!--Animate Aos-->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!--CSS Stylesheet-->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <script>
+        // Configure Tailwind to use class-based dark mode
+        tailwind.config = {
+            darkMode: 'class',
+        };
+
+        // IMMEDIATELY load theme on the root <html> element to completely prevent white screen flashing
+        (function () {
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme === 'dark') {
+                document.documentElement.classList.add('dark');
+            } else if (savedTheme === 'light') {
+                document.documentElement.classList.remove('dark');
+            } else {
+                if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                    document.documentElement.classList.add('dark');
+                } else {
+                    document.documentElement.classList.remove('dark');
+                }
+            }
+        })();
+    </script>
+    <!--Title-->
+    <title>Happy Store-Dashboard</title>
+
+</head>
+
+<body class="bg-gray-50 dark:bg-gray-950 text-gray-900 dark:text-white min-h-screen transition-colors duration-300">
+    <div class="overall">
+
+        <!-- Top Navbar (Fixed Height) -->
+        <nav
+            class="h-16 !bg-white dark:!bg-gray-900 border-b border-gray-200 dark:border-gray-800 transition-colors duration-300 z-30">
+            <div class="px-4 flex items-center justify-between h-full w-full">
+
+                <div class="flex items-center min-w-0 gap-2 sm:gap-3">
+                    <button id="mobile-menu-btn"
+                        class="text-gray-600 dark:text-gray-300 md:hidden p-1.5 sm:p-2 focus:outline-none hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg shrink-0">
+                        <i class="bi bi-list text-xl sm:text-2xl"></i>
+                    </button>
+
+                    <div class="flex items-center shrink-0">
+                         <a href="./index.html">
+                            <img src="./Assets/images/logo.jpg" class="h-8 w-auto sm:h-10 mr-2 rounded-md" alt="Logo">
+                        </a>
+                        <span
+                            class="text-base sm:text-xl font-bold text-blue-600 dark:text-blue-400 truncate">Dashboard</span>
+                    </div>
+                </div>
+
+                <div class="text-right ml-4 shrink-0">
+                    <span class="text-xs sm:text-sm font-medium text-gray-700 dark:text-gray-300 block sm:inline">
+                        <span class="text-gray-400 hidden xs:inline">Welcome, </span>Shree
+                    </span>
+                </div>
+
+            </div>
+        </nav>
+
+        <!-- Parent Container (Remaining Height) -->
+        <div class="flex w-full flex-1 overflow-hidden relative">
+
+            <!-- Mobile Overlay Backdrop -->
+            <div id="sidebar-backdrop" class="fixed inset-0 bg-black/50 z-10 hidden md:hidden transition-opacity"></div>
+
+            <!-- Side Navbar (Responsive Drawer) -->
+            <aside id="sidebar"
+                class="fixed md:static inset-y-0 left-0 w-64 h-[calc(100vh-4rem)] top-16 !bg-white dark:!bg-gray-900 border-r border-gray-200 dark:border-gray-800 z-20 transform -translate-x-full md:translate-x-0 transition-transform duration-300 ease-in-out">
+                <div class="h-full px-4 py-6 overflow-y-auto">
+                    <ul class="space-y-4 font-medium">
+                        <li>
+                            <a href="index.html"
+                                class="flex items-center p-3 text-gray-700 dark:text-white rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">
+                                <i class="bi bi-box-seam text-lg text-gray-500 dark:text-gray-400"></i>
+                                <span class="ml-3">Dashboard</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="inventory.html"
+                                class="flex items-center p-3 text-blue-700 dark:text-blue-400 rounded-lg bg-blue-50 dark:bg-blue-950/40">
+                                <i class="bi bi-speedometer2 text-lg"></i>
+                                <span class="ml-3">Inventory</span>
+                            </a>
+                        </li>
+                        
+                        <li>
+                            <a href="billing.html"
+                                class="flex items-center p-3 text-gray-700 dark:text-white rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">
+                                <i class="bi bi-box-seam text-lg text-gray-500 dark:text-gray-400"></i>
+                                <span class="ml-3">Billing</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="reports.html"
+                                class="flex items-center p-3 text-gray-700 dark:text-white rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">
+                                <i class="bi bi-box-seam text-lg text-gray-500 dark:text-gray-400"></i>
+                                <span class="ml-3">Reports</span>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="pt-4 mt-4 border-t border-gray-100 dark:border-gray-800">
+                        <a href="settings.html"
+                            class="flex items-center p-3 text-gray-700 dark:text-white rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">
+                            <i class="bi bi-gear text-lg text-gray-500 dark:text-gray-400"></i>
+                            <span class="ml-3">Settings</span>
+                        </a>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- Main Content Area (Exact 3/4 Width) -->
+            <main class="flex-1 !bg-gray-50 dark:!bg-gray-950 overflow-y-auto transition-colors duration-300">
+                <div class="p-6 overflow-y-auto h-full space-y-6">
+
+                    <!-- Summary Cards -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                        <!-- Total Products Card -->
+                        <div id="card-total"
+                            class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 dark:text-grey-900  cursor-pointer hover:shadow-md transition">
+                            <h3 class="text-gray-500 text-sm font-medium ">Total Products</h3>
+
+                            <p id="total-val" class="text-2xl font-bold text-gray-900 py-2">0</p>
+                            <p id="total-val" class="text-xs font-bold text-gray-400">Click to view</p>
+                        </div>
+
+                        <div id="card-low"
+                            class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 dark:text-grey-900 cursor-pointer hover:shadow-md transition">
+                            <h3 class="text-gray-500 text-sm font-medium">Low Stock</h3>
+                            <p id="low-val" class="text-2xl font-bold text-red-600 py-2">0</p>
+                            <p id="total-val" class="text-xs font-bold text-gray-400">Click to view</p>
+                        </div>
+
+                        <div id="card-expiry"
+                            class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 cursor-pointer hover:shadow-md transition">
+                            <h3 class="text-gray-500 text-sm font-medium">Expiring Soon</h3>
+                            <p id="expiry-val" class="text-2xl font-bold text-orange-600 py-2">0</p>
+                            <p id="total-val" class="text-xs font-bold text-gray-400">Click to view</p>
+                        </div>
+
+                    </div>
+
+                    <h2 class="text-lg font-bold dark:text-white text-gray-800">Inventory Details</h2>
+
+                    <!-- Table Section -->
+                    <div class="p-6 bg-white rounded-xl border border-gray-200 shadow-sm overflow-hidden">
+                        <div class="flex flex-wrap items-stretch gap-3">
+
+                            <button onclick="openCategoryModal()"
+                                class="flex items-center justify-center gap-2 bg-blue-500 hover:bg-blue-600 text-white font-semibold px-4 rounded-lg shadow-sm transition-all active:scale-95 text-sm h-11 min-w-[140px]">
+
+                                <span class="text-left leading-tight">Add/Delete<br>Category</span>
+                            </button>
+
+                            <button onclick="window.openAddModal()"
+                                class="flex items-center justify-center gap-2 bg-blue-500 hover:bg-blue-600 text-white font-semibold px-4 rounded-lg shadow-sm transition-all active:scale-95 text-sm h-11">
+                                <i class="bi bi-plus-lg"></i>
+                                <span>Add Product</span>
+                            </button>
+
+                            <select id="category-filter"
+                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 px-3 h-11 outline-none cursor-pointer">
+                                <option value="all">All Categories</option>
+                            </select>
+
+                            <div class="flex-grow md:flex-grow-0">
+                                <input type="text" id="search-input" placeholder="Search products..."
+                                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 px-4 h-11 w-full md:w-64 outline-none">
+                                <p id="total-val" class="text-xs font-bold text-gray-400 pt-2">Product
+                                    code/name/price/stock/</p>
+                            </div>
+
+                            <select id="sort-filter" onchange="handleSort()"
+                                class="bg-white border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-2 focus:ring-blue-500 outline-none px-3 h-11 cursor-pointer">
+                                <option value="none">Sort By (Default)</option>
+                                <option value="price-asc">Price: Low to High</option>
+                                <option value="price-desc">Price: High to Low</option>
+                                <option value="stock-asc">Stock: Low to High</option>
+                                <option value="expiry-asc">Expiry: Earliest First</option>
+                                <option value="mfg-asc">MFG: Oldest First</option>
+                                <option value="name-asc">Name: A-Z</option>
+                                <option value="sino-asc">SI.No: Low to High</option>
+                            </select>
+
+                            <button onclick="downloadFilteredReport()"
+                                class="flex items-center justify-center gap-2 bg-green-600 hover:bg-green-700 text-white font-semibold px-4 rounded-lg shadow-sm transition-all active:scale-95 text-sm h-11">
+                                <i class="bi bi-download"></i>
+                                <span>Download Report</span>
+                            </button>
+
+                        </div>
+                    </div>
+
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-sm text-left text-gray-500">
+                            <thead class="text-xs text-gray-700 uppercase bg-gray-50 border-b">
+                                <tr>
+                                    <th class="px-1 py-3 text-center">SI</th>
+                                    <th class="px-1 py-3 text-center">Invoice No</th>
+                                    <th class="px-1 py-3 text-center">Barcode</th>
+                                    <th class="px-1 py-3 text-center">Category</th>
+                                    <th class="px-1 py-3 text-center">Product</th>
+                                    <th class="px-1 py-3 text-center">Qty</th>
+                                    <th class="px-1 py-3 text-center">Unit</th>
+                                    <th class="px-1 py-3 text-center">Price</th>
+                                    <th class="px-1 py-3 text-center">Stock</th>
+                                    <th class="px-1 py-3 text-center">MFG</th>
+                                    <th class="px-1 py-3 text-center">Warehouse</th>
+                                    <th class="px-1 py-3 text-center">Expiry</th>
+                                    <th class="px-1 py-3 text-center">Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody id="inventory-body">
+                                <!-- Data will be injected here by JS -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+        </div>
+        </main>
+
+
+
+
+        <div id="categoryModal"
+            class="fixed inset-0 bg-black bg-opacity-50 hidden z-[100] flex items-center justify-center">
+            <div class="bg-white p-6 rounded-xl w-[450px] shadow-xl">
+                <div class="flex justify-between items-center mb-6">
+                    <h2 class="text-xl font-bold text-gray-800">Manage Categories</h2>
+                    <button onclick="closeCategoryModal()" class="text-gray-400 hover:text-gray-600"><i
+                            class="bi bi-x-lg"></i></button>
+                </div>
+
+                <div class="mb-8 pb-6 border-b border-gray-100">
+                    <h3 class="text-sm font-bold text-blue-600 uppercase tracking-wider mb-3">Add New Category</h3>
+                    <div class="flex gap-2">
+                        <input type="text" id="new-cat-name" placeholder="Category Name"
+                            class="flex-1 p-2 border rounded-lg text-sm">
+                        <button onclick="saveCategory()"
+                            class="px-4 py-2 bg-blue-600 text-white rounded-lg text-sm hover:bg-blue-700">Add</button>
+                    </div>
+                    <p id="add-error-msg" class="text-xs mt-2 font-medium hidden"></p>
+                </div>
+
+                <div>
+                    <h3 class="text-sm font-bold text-red-600 uppercase tracking-wider mb-3">Delete Category</h3>
+                    <div class="flex gap-2">
+                        <select id="delete-cat-dropdown"
+                            class="flex-1 p-2 border rounded-lg text-sm bg-gray-50"></select>
+                        <button onclick="deleteCategory()"
+                            class="px-4 py-2 bg-red-100 text-red-600 rounded-lg text-sm hover:bg-red-200">Delete</button>
+                    </div>
+                    <p id="delete-error-msg" class="text-xs mt-2 font-medium hidden"></p>
+                </div>
+
+                <p id="cat-status-msg" class="mt-4 text-sm font-medium hidden"></p>
+            </div>
+        </div>
+
+
+
+<div id="barcode-modal" class="fixed inset-0 bg-black bg-opacity-50 hidden flex items-center justify-center z-50">
+    <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+        <h3 class="text-lg font-bold mb-4">Product Barcode</h3>
+        <div id="modal-barcode-container" class="mb-6"></div>
+        
+        <div class="flex justify-center gap-4">
+            <button onclick="downloadBarcode()" class="bg-blue-600 text-white px-4 py-2 rounded">Download</button>
+            <button onclick="closeBarcodeModal()" class="bg-gray-300 px-4 py-2 rounded">Close</button>
+        </div>
+    </div>
+</div>
+
+
+
+        <div id="edit-modal"
+            class="fixed inset-0 z-[100] hidden bg-gray-900 bg-opacity-50 flex items-center justify-center p-4">
+            <div class="bg-white rounded-xl shadow-xl w-full max-w-md overflow-y-auto max-h-[90vh]">
+                <div
+                    class="px-6 py-4 border-b border-gray-100 flex justify-between items-center bg-blue-600 text-white">
+                    <h3 id="modal-title" class="font-bold">Update Product Details</h3>
+
+
+                    <button type="button" onclick="closeModal()" class="hover:text-gray-200">
+                        <i class="bi bi-x-lg"></i>
+                    </button>
+
+
+                </div>
+                <form id="edit-form" class="p-6 space-y-4" novalidate>
+                    <input type="hidden" id="edit-si-no">
+
+                    <div class="grid grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-xs font-bold text-gray-500 uppercase">SI. No</label>
+                            <input type="text" id="display-si-no" disabled
+                                class="w-full p-2 bg-gray-100 border rounded-lg text-gray-500">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-gray-500 uppercase">Category</label>
+                            <select id="edit-category"
+                                class="w-full p-2 border rounded-lg focus:ring-2 focus:ring-blue-500 outline-none"></select>
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-bold text-gray-500 uppercase">Product Name</label>
+                        <input type="text" id="edit-name"
+                            class="w-full p-2 border rounded-lg outline-none transition-colors border-gray-300 focus:border-blue-500">
+                        <span id="error-name" class="text-[10px] text-red-500 font-semibold hidden">Name is
+                            required</span>
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-xs font-bold text-gray-500 uppercase">Price (₹)</label>
+                            <input type="number" id="edit-price" step="0.01"
+                                class="w-full p-2 border rounded-lg outline-none">
+                            <span id="error-price" class="text-[10px] text-red-500 font-semibold hidden">Must be ≥
+                                0</span>
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-gray-500 uppercase">Stock</label>
+                            <input type="number" id="edit-stock" class="w-full p-2 border rounded-lg outline-none">
+                            <span id="error-stock" class="text-[10px] text-red-500 font-semibold hidden">Required</span>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-xs font-bold text-gray-500 uppercase">Unit</label>
+                            <select id="edit-unit" class="w-full p-2 border rounded-lg outline-none">
+                                <option value="kg">kg</option>
+                                <option value="g">g</option>
+                                <option value="ltr">ltr</option>
+                                <option value="ml">ml</option>
+                                <option value="pkt">pkt</option>
+                                <option value="pcs">pcs</option>
+                                <option value="box">box</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-gray-500 uppercase">Qty/Size</label>
+                            <input type="number" id="edit-qty" class="w-full p-2 border rounded-lg outline-none">
+                            <span id="error-qty" class="text-[10px] text-red-500 font-semibold hidden"></span>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-xs font-bold text-gray-500 uppercase">MFG Date</label>
+                            <input type="date" id="edit-mfg" class="w-full p-2 border rounded-lg outline-none">
+                            <span id="error-mfg" class="text-[10px] text-red-500 font-semibold hidden">Must be > 30
+                                days old</span>
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-gray-500 uppercase">Expiry Date</label>
+                            <input type="date" id="edit-expiry" class="w-full p-2 border rounded-lg outline-none">
+                            <span id="error-expiry" class="text-[10px] text-red-500 font-semibold hidden">Cannot be
+                                in past</span>
+                        </div>
+                    </div>
+
+                    <div class="flex gap-3 pt-4">
+                        <button type="button" onclick="closeModal()"
+                            class="flex-1 px-4 py-2 bg-gray-100 text-gray-700 rounded-lg font-bold">
+                            Cancel
+                        </button>
+                        <button type="submit"
+                            class="flex-1 px-4 py-2 bg-blue-600 text-white rounded-lg font-bold hover:bg-blue-700">Update</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+
+
+    </div>
+
+    <script src="./Assets/js/inventory.js"></script>
+    <!--BarCode -->
+    <script src="https://cdn.jsdelivr.net/npm/jsbarcode@3.11.5/dist/JsBarcode.all.min.js"></script>
+
+</body>
+
+</html>

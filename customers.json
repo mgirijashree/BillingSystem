@@ -1,0 +1,17 @@
+[
+  {
+    "mobile": "9876543210",
+    "name": "Arun Kumar",
+    "loyaltyPoints": 120
+  },
+  {
+    "mobile": "9123456780",
+    "name": "Priya",
+    "loyaltyPoints": 80
+  },
+  {
+    "mobile": "9988776655",
+    "name": "Rahul",
+    "loyaltyPoints": 45
+  }
+]

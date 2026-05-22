@@ -1,0 +1,153 @@
+[
+  {
+    "category_id": "CAT-001",
+    "category_name": "Grains & Staples",
+    "products": [
+      { "si_no": "HS001", "invoice_no":"INV-001","barcode": "890100000001", "name": "Basmati Rice",  "quantity": 5, "unit_type": "kg", "price": 550, "supplier_id": "SUP-002",
+        "supplier_name": "Annapoorna Foods","mfg_date": "2026-02-10", "expiry_date": "2028-02-10", "stock": 0 },
+      { "si_no": "HS002", "invoice_no":"INV-002","barcode": "890100000002","name": "Chakki Atta",   "quantity": 5, "unit_type": "kg", "price": 245, "supplier_id": "SUP-003",
+        "supplier_name": "Shree Ganesh Distributors","mfg_date": "2026-04-15", "expiry_date": "2026-10-15", "stock": 60 },
+      { "si_no": "HS003", "invoice_no":"INV-003","barcode": "890100000003","name": "Toor Dal",   "quantity": 1, "unit_type": "kg", "price": 165, "supplier_id": "SUP-005",
+        "supplier_name": "Krishna Milk Agency","mfg_date": "2026-01-20", "expiry_date": "2026-05-17", "stock": 30 },
+      { "si_no": "HS004", "invoice_no":"INV-004","barcode": "890100000004","name": "Moong Dal",   "quantity": 1, "unit_type": "kg", "price": 140, "supplier_id": "SUP-001",
+        "supplier_name": "Ramesh Traders","mfg_date": "2026-03-05", "expiry_date": "2027-03-05", "stock": 25 },
+      { "si_no": "HS005", "invoice_no":"INV-005","barcode": "890100000005","name": "Kabuli Chana",   "quantity": 1, "unit_type": "kg", "price": 130, "supplier_id": "SUP-006",
+        "supplier_name": "Murugan Spices","mfg_date": "2026-02-28", "expiry_date": "2027-02-28", "stock": 35 }
+    ]
+  },
+  {
+    "category_id": "CAT-002",
+    "category_name": "Dairy & Breakfast",
+    "products": [
+      { "si_no": "SKU-006", "invoice_no":"INV-006","barcode": "290100000005","name": "Fresh Paneer",   "quantity": 200, "unit_type": "g", "price": 115,"supplier_id": "SUP-002",
+        "supplier_name": "Annapoorna Foods", "mfg_date": "2026-05-10", "expiry_date": "2026-05-25", "stock": 40 },
+      { "si_no": "SKU-007", "invoice_no":"INV-007","barcode": "290100000006","name": "Full Cream Milk",   "quantity": 1, "unit_type": "L", "price": 66, "supplier_id": "SUP-001",
+        "supplier_name": "Ramesh Traders","mfg_date": "2026-05-11", "expiry_date": "2026-05-13", "stock": 100 },
+      { "si_no": "SKU-008", "invoice_no":"INV-008","barcode": "890100000007","name": "Desi Ghee",   "quantity": 500, "unit_type": "ml", "price": 340, "supplier_id": "SUP-004",
+        "supplier_name": "Lakshmi Dairy Suppliers","mfg_date": "2026-01-15", "expiry_date": "2026-05-15", "stock": 0 },
+      { "si_no": "SKU-009", "invoice_no":"INV-009","barcode": "890100000008","name": "Thick Poha",   "quantity": 1, "unit_type": "kg", "price": 75, "supplier_id": "SUP-006",
+        "supplier_name": "Murugan Spices","mfg_date": "2026-04-01", "expiry_date": "2026-12-01", "stock": 50 },
+      { "si_no": "SKU-0010", "invoice_no":"INV-010","barcode": "890100000009","name": "Curd/Dahi",   "quantity": 500, "unit_type": "g", "price": 50, "supplier_id": "SUP-003",
+        "supplier_name": "Shree Ganesh Distributors","mfg_date": "2026-05-10", "expiry_date": "2026-05-18", "stock": 20 }
+    ]
+  },
+  {
+    "category_id": "CAT-003",
+    "category_name": "Spices & Oils",
+    "products": [
+      { "si_no": "SKU-0011", "invoice_no":"INV-011","barcode": "890100000011","name": "Turmeric Powder",   "quantity": 200, "unit_type": "g", "price": 55, "supplier_id": "SUP-007",
+        "supplier_name": "A1 Masala Mart","mfg_date": "2026-03-01", "expiry_date": "2026-06-01", "stock": 120 },
+      { "si_no": "SKU-0012", "invoice_no":"INV-012","barcode": "890100000012","name": "Garam Masala",   "quantity": 100, "unit_type": "g", "price": 85, "supplier_id": "SUP-001",
+        "supplier_name": "Ramesh Traders","mfg_date": "2026-04-10", "expiry_date": "2027-04-10", "stock": 90 },
+      { "si_no": "SKU-0013", "invoice_no":"INV-013","barcode": "890100000013","name": "Mustard Oil",   "quantity": 1, "unit_type": "L", "price": 180, "supplier_id": "SUP-007",
+        "supplier_name": "A1 Masala Mart","mfg_date": "2026-01-05", "expiry_date": "2027-01-05", "stock": 0 },
+      { "si_no": "SKU-0014", "invoice_no":"INV-014","barcode": "290100000014","name": "Cumin Seeds",   "quantity": 100, "unit_type": "g", "price": 70, "supplier_id": "SUP-002",
+        "supplier_name": "Annapoorna Foods","mfg_date": "2026-02-15", "expiry_date": "2027-02-15", "stock": 55 },
+      { "si_no": "SKU-0015", "invoice_no":"INV-015","barcode": "290100000015","name": "Sunflower Oil",   "quantity": 1, "unit_type": "L", "price": 145, "supplier_id": "SUP-005",
+        "supplier_name": "Krishna Milk Agency","mfg_date": "2026-03-20", "expiry_date": "2027-03-20", "stock": 60 }
+    ]
+  },
+  {
+    "category_id": "CAT-004",
+    "category_name": "Snacks & Sweets",
+    "products": [
+      { "si_no": "SKU-0016", "invoice_no":"INV-016","barcode": "890100000016","name": "Masala Peanuts",   "quantity": 200, "unit_type": "g", "price": 60, "supplier_id": "SUP-001",
+        "supplier_name": "Ramesh Traders","mfg_date": "2026-04-20", "expiry_date": "2026-10-20", "stock": 80 },
+      { "si_no": "SKU-0017", "invoice_no":"INV-017","barcode": "890100000017","name": "Gulab Jamun Mix",   "quantity": 200, "unit_type": "g", "price": 110, "supplier_id": "SUP-003",
+        "supplier_name": "Shree Ganesh Distributors","mfg_date": "2026-03-15", "expiry_date": "2027-03-15", "stock": 40 },
+      { "si_no": "SKU-0018", "invoice_no":"INV-018","barcode": "890100000018","name": "Aloo Bhujia",   "quantity": 500, "unit_type": "g", "price": 150, "supplier_id": "SUP-002",
+        "supplier_name": "Annapoorna Foods","mfg_date": "2026-04-05", "expiry_date": "2026-10-05", "stock": 100 },
+      { "si_no": "SKU-0019", "invoice_no":"INV-019","barcode": "890100000019","name": "Roasted Almonds",   "quantity": 200, "unit_type": "g", "price": 280, "supplier_id": "SUP-004",
+        "supplier_name": "Lakshmi Dairy Suppliers","mfg_date": "2026-05-01", "expiry_date": "2027-05-01", "stock": 20 },
+      { "si_no": "SKU-0020", "invoice_no":"INV-020","barcode": "890100000020","name": "Assorted Biscuits",   "quantity": 300, "unit_type": "g", "price": 40, "supplier_id": "SUP-001",
+        "supplier_name": "Ramesh Traders","mfg_date": "2026-05-01", "expiry_date": "2026-11-01", "stock": 150 }
+    ]
+  },
+  {
+    "category_id": "CAT-005",
+    "category_name": "Beverages",
+    "products": [
+      { "si_no": "SKU-0021", "invoice_no":"INV-021","barcode": "890100000021","name": "Instant Coffee",   "quantity": 100, "unit_type": "g", "price": 320, "supplier_id": "SUP-005",
+        "supplier_name": "Krishna Milk Agency","mfg_date": "2026-04-20", "expiry_date": "2028-04-20", "stock": 35 },
+      { "si_no": "SKU-0022", "invoice_no":"INV-022","barcode": "890100000022","name": "Masala Tea Bags",   "supplier_id": "SUP-002",
+        "supplier_name": "Annapoorna Foods","quantity": 100, "unit_type": "pcs", "price": 250, "mfg_date": "2026-02-15", "expiry_date": "2028-02-15", "stock": 50 },
+      { "si_no": "SKU-0023", "invoice_no":"INV-023","barcode": "890100000023","name": "Mango Drink",   "quantity": 1, "unit_type": "L", "price": 110, "supplier_id": "SUP-004",
+        "supplier_name": "Lakshmi Dairy Suppliers","mfg_date": "2026-04-10", "expiry_date": "2026-10-10", "stock": 45 },
+      { "si_no": "SKU-0024", "invoice_no":"INV-024","barcode": "890100000024","name": "Mineral Water",   "quantity": 1, "unit_type": "L", "price": 20, "supplier_id": "SUP-001",
+        "supplier_name": "Ramesh Traders","mfg_date": "2026-05-01", "expiry_date": "2027-05-01", "stock": 200 },
+      { "si_no": "SKU-0025", "invoice_no":"INV-025","barcode": "290100000025","name": "Green Tea",   "quantity": 25, "unit_type": "bags", "price": 160, "supplier_id": "SUP-003",
+        "supplier_name": "Shree Ganesh Distributors","mfg_date": "2026-03-10", "expiry_date": "2028-03-10", "stock": 30 }
+    ]
+  },
+  {
+    "category_id": "CAT-006",
+    "category_name": "Frozen Foods",
+    "products": [
+      { "si_no": "SKU-0026", "invoice_no":"INV-026","barcode": "890100000026","name": "Frozen Green Peas",   "quantity": 500, "unit_type": "g", "price": 95, "mfg_date": "2026-03-01", "expiry_date": "2027-09-01", "stock": 55 },
+      { "si_no": "SKU-0027", "invoice_no":"INV-027","barcode": "890100000027","name": "Veg Burger Patties",   "quantity": 4, "unit_type": "pcs", "price": 220, "supplier_id": "SUP-003",
+        "supplier_name": "Shree Ganesh Distributors","mfg_date": "2026-04-15", "expiry_date": "2027-01-15", "stock": 20 },
+      { "si_no": "SKU-0028", "invoice_no":"INV-028","barcode": "890100000028","name": "Frozen Paneer Cubes",   "quantity": 200, "unit_type": "g", "price": 130, "supplier_id": "SUP-001",
+        "supplier_name": "Ramesh Traders","mfg_date": "2026-05-01", "expiry_date": "2026-11-01", "stock": 30 },
+      { "si_no": "SKU-0029", "invoice_no":"INV-029","barcode": "890100000029","name": "Frozen Mixed Berries",   "quantity": 1, "unit_type": "kg", "price": 650, "supplier_id": "SUP-006",
+        "supplier_name": "Murugan Spices","mfg_date": "2026-02-20", "expiry_date": "2027-02-20", "stock": 10 },
+      { "si_no": "SKU-0030", "invoice_no":"INV-030","barcode": "890100000030","name": "Frozen Sweet Corn",   "quantity": 500, "unit_type": "g", "price": 105, "supplier_id": "SUP-004",
+        "supplier_name": "Lakshmi Dairy Suppliers","mfg_date": "2026-03-10", "expiry_date": "2027-03-10", "stock": 40 }
+    ]
+  },
+  {
+    "category_id": "CAT-007",
+    "category_name": "Canned Foods",
+    "products": [
+      { "si_no": "SKU-0031", "invoice_no":"INV-031","barcode": "890100000031","name": "Canned Chickpeas",   "quantity": 400, "unit_type": "g", "price": 85, "supplier_id": "SUP-003",
+        "supplier_name": "Shree Ganesh Distributors","mfg_date": "2026-01-01", "expiry_date": "2029-01-01", "stock": 100 },
+      { "si_no": "SKU-0032", "invoice_no":"INV-032","barcode": "890100000032","name": "Tomato Puree",   "quantity": 500, "unit_type": "g", "price": 65, "supplier_id": "SUP-002",
+        "supplier_name": "Annapoorna Foods","mfg_date": "2026-03-15", "expiry_date": "2027-03-15", "stock": 60 },
+      { "si_no": "SKU-0033", "invoice_no":"INV-033","barcode": "890100000033","name": "Instant Noodles",   "quantity": 8, "unit_type": "pk", "price": 120, "supplier_id": "SUP-003",
+        "supplier_name": "Shree Ganesh Distributors","mfg_date": "2026-04-01", "expiry_date": "2026-12-01", "stock": 200 },
+      { "si_no": "SKU-0034", "invoice_no":"INV-034","barcode": "890100000034","name": "Fruit Jam",   "quantity": 500, "unit_type": "g", "price": 180, "mfg_date": "2026-01-10", "expiry_date": "2027-01-10", "stock": 45 },
+      { "si_no": "SKU-0035", "invoice_no":"INV-035","barcode": "890100000035","name": "Vegetable Broth",   "quantity": 1, "unit_type": "L", "price": 210, "supplier_id": "SUP-004",
+        "supplier_name": "Lakshmi Dairy Suppliers","mfg_date": "2026-04-20", "expiry_date": "2027-04-20", "stock": 15 }
+    ]
+  },
+  {
+    "category_id": "CAT-008",
+    "category_name": "Personal Care",
+    "products": [
+      { "si_no": "SKU-0036", "invoice_no":"INV-036","barcode": "890100000036","name": "Ayurvedic Soap",   "quantity": 3, "unit_type": "pcs", "price": 145, "mfg_date": "2026-03-01", "expiry_date": "2029-03-01", "stock": 80 },
+      { "si_no": "SKU-0037", "invoice_no":"INV-037","barcode": "890100000037","name": "Herbal Toothpaste",   "quantity": 150, "unit_type": "g", "price": 95, "supplier_id": "SUP-004",
+        "supplier_name": "Lakshmi Dairy Suppliers","mfg_date": "2026-02-15", "expiry_date": "2028-02-15", "stock": 120 },
+      { "si_no": "SKU-0038", "invoice_no":"INV-038","barcode": "890100000038","name": "Coconut Hair Oil",   "quantity": 200, "unit_type": "ml", "price": 110, "supplier_id": "SUP-003",
+        "supplier_name": "Shree Ganesh Distributors","mfg_date": "2026-01-01", "expiry_date": "2029-01-01", "stock": 50 },
+      { "si_no": "SKU-0039", "invoice_no":"INV-039","barcode": "890100000039","name": "Anti-Dandruff Shampoo",   "quantity": 400, "unit_type": "ml", "price": 350, "mfg_date": "2026-02-10", "expiry_date": "2029-02-10", "stock": 40 },
+      { "si_no": "SKU-0040", "invoice_no":"INV-040","barcode": "890100000040","name": "Hand Wash Refill",   "quantity": 750, "unit_type": "ml", "price": 160, "mfg_date": "2026-05-01", "expiry_date": "2028-05-01", "stock": 70 }
+    ]
+  },
+  {
+    "category_id": "CAT-009",
+    "category_name": "Household",
+    "products": [
+      { "si_no": "SKU-0041", "invoice_no":"INV-041","barcode": "890100000041","name": "Laundry Detergent",   "quantity": 1, "unit_type": "kg", "price": 180, "supplier_id": "SUP-002",
+        "supplier_name": "Annapoorna Foods","mfg_date": "2026-03-01", "expiry_date": "2028-03-01", "stock": 90 },
+      { "si_no": "SKU-0042", "invoice_no":"INV-042","barcode": "890100000042","name": "Dishwashing Liquid",   "quantity": 500, "unit_type": "ml", "price": 115, "mfg_date": "2026-04-15", "expiry_date": "2028-04-15", "stock": 65 },
+      { "si_no": "SKU-0043", "invoice_no":"INV-043","barcode": "890100000043","name": "Floor Cleaner",   "quantity": 1, "unit_type": "L", "price": 195, "supplier_id": "SUP-002",
+        "supplier_name": "Annapoorna Foods","mfg_date": "2026-02-01", "expiry_date": "2028-02-01", "stock": 45 },
+      { "si_no": "SKU-0044", "invoice_no":"INV-044","barcode": "890100000044","name": "Glass Cleaner Spray",   "quantity": 500, "unit_type": "ml", "price": 95, "supplier_id": "SUP-004",
+        "supplier_name": "Lakshmi Dairy Suppliers","mfg_date": "2026-01-10", "expiry_date": "2028-01-10", "stock": 25 },
+      { "si_no": "SKU-0045", "invoice_no":"INV-045","barcode": "890100000045","name": "Garbage Bags",   "quantity": 30, "unit_type": "pcs", "price": 130, "mfg_date": "2026-05-01", "expiry_date": "2030-01-01", "stock": 150 }
+    ]
+  },
+  {
+    "category_id": "CAT-0010",
+    "category_name": "Fresh Produce",
+    "products": [
+      { "si_no": "SKU-0046", "invoice_no":"INV-046","barcode": "890100000046","name": "Gala Apples",   "quantity": 1, "unit_type": "kg", "price": 220, "mfg_date": "2026-05-05", "expiry_date": "2026-05-25", "stock": 60 },
+      { "si_no": "SKU-0047", "invoice_no":"INV-047","barcode": "890100000047","name": "Red Onions",   "quantity": 1, "unit_type": "kg", "price": 40, "supplier_id": "SUP-002",
+        "supplier_name": "Annapoorna Foods","mfg_date": "2026-05-01", "expiry_date": "2026-06-30", "stock": 200 },
+      { "si_no": "SKU-0048", "invoice_no":"INV-048","barcode": "890100000048","name": "Vine Tomatoes",   "quantity": 1, "unit_type": "kg", "price": 60, "supplier_id": "SUP-004",
+        "supplier_name": "Lakshmi Dairy Suppliers","mfg_date": "2026-05-09", "expiry_date": "2026-05-16", "stock": 80 },
+      { "si_no": "SKU-0049", "invoice_no":"INV-049","barcode": "890100000049","name": "Baby Spinach",   "quantity": 200, "unit_type": "g", "price": 45, "mfg_date": "2026-05-11", "expiry_date": "2026-05-14", "stock": 15 },
+      { "si_no": "SKU-0050", "invoice_no":"INV-050","barcode": "890100000050","name": "Organic Bananas",   "quantity": 12, "unit_type": "pcs", "price": 75, "supplier_id": "SUP-002",
+        "supplier_name": "Annapoorna Foods","mfg_date": "2026-05-10", "expiry_date": "2026-05-14", "stock": 30 }
+    ]
+  }
+]
